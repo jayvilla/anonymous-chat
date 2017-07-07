@@ -1,9 +1,9 @@
-import {CHAT_CHANGE_MESSAGE} from './chatMiddleware';
+import { CHAT_CHANGE_MESSAGE } from './chatMiddleware';
 
-const changeMessage = (msg) => {
+const changeMessage = msg => {
   return {
     type: CHAT_CHANGE_MESSAGE,
-    payload: msg
+    payload: msg,
   }
 };
 

@@ -1,21 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
   }
 
-  render() {
+  renderMessages() {
     const {messages} = this.props;
-    const mappedMessages = messages.map((message, i) =>
-      <div key={i}>{message.message.author}: {message.message.body}</div>
+    return messages.map((message, i) =>
+      <div className="chat-messages" key={i}><strong>{message.message.author}</strong>: {message.message.body}</div>
     )
+  }
+
+  render() {
     return (
-      <div>
-        <div>ChatWindow</div>
-        {mappedMessages}
+      <div className="chat window">
+        <div className="chat title">ChatWindow</div>
+        <div className="messages">
+          {this.renderMessages()}
+        </div>
       </div>
     );
   }
