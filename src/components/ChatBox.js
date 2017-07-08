@@ -7,6 +7,8 @@ import changeMessage from '../actions';
 class ChatBox extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -22,17 +24,15 @@ class ChatBox extends Component {
 
   render() {
     return (
-      <div className="chat-box">
+      <div className="chatbox-container">
         <form
-          onSubmit={this.handleSubmit.bind(this)}
-        >
+          onSubmit={this.handleSubmit}>
           <input
             className="chat-input"
             type="text"
             placeholder="Say something..."
             ref="chatinput"
-            onChange={this.handleChange.bind(this)}
-            />
+            onChange={this.handleChange} />
           <button className="chat-button">Send</button>
         </form>
       </div>

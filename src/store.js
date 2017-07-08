@@ -16,6 +16,7 @@ export default function () {
 
   return createStore(
     reducer,
+    // removed default state and implemented in reducer
     applyMiddleware(...middlewares),
   );
 }

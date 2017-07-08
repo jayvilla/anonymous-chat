@@ -7,6 +7,7 @@ const CHAT_RECEIVE_NEW_MESSAGE = '@@chat/receive/new-message';
 const CHAT_RECEIVE_USER_CONNECTED = '@@chat/receive/user-connected';
 const CHAT_RECEIVE_USER_DISCONNECTED = '@@chat/receive/user-disconnected';
 const CHAT_RECEIVE_UNKNOWN = '@@chat/receive/unknown';
+// create new action string
 const CHAT_CHANGE_MESSAGE = '@@chat/change/message';
 
 const chatMiddleware = serverUrl => store => {
