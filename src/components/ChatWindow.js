@@ -24,7 +24,9 @@ class ChatWindow extends Component {
   renderMessages() {
     const { messages } = this.props;
     return messages.map((message, i) =>
-      <div className="message" key={i}><strong>{message.message.author}</strong>: {message.message.body}</div>
+      <div
+        className="message" key={i}>
+        <strong>{message.message.author}</strong>: {message.message.body}</div>
     )
   }
 

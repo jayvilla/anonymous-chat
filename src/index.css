@@ -9,7 +9,7 @@ body {
   background: white;
   width: 85%;
   height: 850px;
-  margin: auto;
+  margin: 20px auto 5px auto;
   overflow-y: scroll;
   background: rgb(255,255,255);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
@@ -29,11 +29,16 @@ body {
   letter-spacing: 0.025em;
   font-size: 1.5em;
   font-weight: 600;
+  border-bottom: 2px solid black;
 }
 
 .message {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.message:first-of-type {
+  padding-top: 5px;
 }
 
 .chatbox-container {
